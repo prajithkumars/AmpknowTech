@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -35,10 +35,10 @@ const Hero: React.FC = () => {
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">
-              AMPKNOW
+              AMPKNOW TECH
             </span>
             <br />
-            <span className="text-white">TECH ACADEMY</span>
+            <span className="text-white">ACADEMY</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-blue-200 mb-8 italic font-light">

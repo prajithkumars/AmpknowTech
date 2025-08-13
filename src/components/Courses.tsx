@@ -23,16 +23,16 @@ const Courses: React.FC = () => {
       icon: <CircuitBoard className="w-8 h-8" />,
       title: "Embedded Systems",
       description: "Master microcontrollers, ARM processors, and real-time systems programming.",
-      duration: "3 Months",
-      price: "₹15,000",
+      duration: "2 Months",
+      price: "₹12,000",
       color: "blue"
     },
     {
       icon: <Wifi className="w-8 h-8" />,
       title: "IoT & Robotics",
       description: "Build connected devices and intelligent robotic systems.",
-      duration: "4 Months",
-      price: "₹18,000",
+      duration: "3 Months",
+      price: "₹16,000",
       color: "green"
     },
     {
@@ -40,15 +40,15 @@ const Courses: React.FC = () => {
       title: "SMPS Technology",
       description: "Switch Mode Power Supply design and troubleshooting techniques.",
       duration: "2 Months",
-      price: "₹12,000",
+      price: "₹9,000",
       color: "yellow"
     },
     {
       icon: <Calculator className="w-8 h-8" />,
-      title: "MATLAB",
+      title: "MATLAB For Electrical Engineering",
       description: "Advanced mathematical computing and simulation for engineers.",
-      duration: "2 Months",
-      price: "₹10,000",
+      duration: "3 Months",
+      price: "₹18,000",
       color: "red"
     },
     {
@@ -56,15 +56,15 @@ const Courses: React.FC = () => {
       title: "UPS & Inverter",
       description: "Uninterruptible Power Supply systems and inverter technology.",
       duration: "2 Months",
-      price: "₹11,000",
+      price: "₹12,000",
       color: "purple"
     },
     {
       icon: <Settings className="w-8 h-8" />,
-      title: "Industrial Automation",
+      title: "PLC",
       description: "PLC programming, SCADA systems, and process automation.",
       duration: "3 Months",
-      price: "₹16,000",
+      price: "₹15,000",
       color: "indigo"
     },
     {
@@ -72,8 +72,56 @@ const Courses: React.FC = () => {
       title: "PCB Designing",
       description: "Professional PCB layout design using industry-standard tools.",
       duration: "2 Months",
-      price: "₹13,000",
+      price: "₹12,000",
       color: "pink"
+    },
+    {
+      icon: <CircuitBoard className="w-8 h-8" />,
+      title: "Basic Electronics With PCB Designing",
+      description: "Fundamental electronics concepts combined with PCB design skills.",
+      duration: "2 Months",
+      price: "₹10,000",
+      color: "teal"
+    },
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "Renewable Energy",
+      description: "Solar, wind, and sustainable energy systems design and implementation.",
+      duration: "2 Months",
+      price: "₹10,000",
+      color: "green"
+    },
+    {
+      icon: <Settings className="w-8 h-8" />,
+      title: "PCB Designing and Components Fixing",
+      description: "Advanced PCB design with hands-on component assembly and repair.",
+      duration: "2 Months",
+      price: "₹12,000",
+      color: "blue"
+    },
+    {
+      icon: <Battery className="w-8 h-8" />,
+      title: "Electric Vehicles",
+      description: "EV technology, battery management systems, and charging infrastructure.",
+      duration: "2 Months",
+      price: "₹16,000",
+      color: "red"
+    },
+    {
+      icon: <CircuitBoard className="w-8 h-8" />,
+      title: "PCB Troubleshooting",
+      description: "Advanced techniques for diagnosing and fixing PCB issues.",
+      duration: "2 Months",
+      price: "₹18,000",
+      color: "purple"
+    },
+    {
+      icon: <Battery className="w-8 h-8" />,
+      title: "BMS (Battery Management System)",
+      description: "Design and implementation of battery management systems for various applications.",
+      duration: "2 Months",
+      price: "₹16,000",
+      color: "indigo"
     }
   ];
 
@@ -209,7 +257,7 @@ const Courses: React.FC = () => {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Electrical & <span className="text-blue-600">Electronics Engineering</span>
+              EEE & ECE <span className="text-blue-600">Value Added Courses</span>
             </h3>
             <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
           </div>
