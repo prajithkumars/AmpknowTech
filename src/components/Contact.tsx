@@ -18,8 +18,6 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create WhatsApp message with form details
     const message = `Hi, I'm interested in AMPKNOW TECH ACADEMY courses.
 
 My Details:
@@ -30,19 +28,15 @@ Phone: ${formData.phone}
 Message: ${formData.message}
 
 Please provide more information about your courses.`;
-    
-    // Open WhatsApp with the message
     const whatsappUrl = `https://wa.me/917904617831?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-    
-    // Reset form after sending
     setFormData({ name: '', email: '', phone: '', message: '' });
     alert('Redirecting to WhatsApp with your details...');
   };
 
   return (
-    <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="relative py-20 bg-white">
+      <div className="container mx-auto px-2 sm:px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Get In <span className="text-blue-600">Touch</span>
@@ -54,11 +48,10 @@ Please provide more information about your courses.`;
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 mx-4 lg:mx-0">
+          <div className="bg-gray-50 rounded-2xl p-4 sm:p-6 md:p-8 flex-1 w-full max-w-full">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Send us a Message</h3>
-            
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div>
@@ -76,7 +69,6 @@ Please provide more information about your courses.`;
                     placeholder="Your full name"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number *
@@ -93,7 +85,6 @@ Please provide more information about your courses.`;
                   />
                 </div>
               </div>
-
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   Email Address *
@@ -109,7 +100,6 @@ Please provide more information about your courses.`;
                   placeholder="your.email@example.com"
                 />
               </div>
-
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   Message *
@@ -125,7 +115,6 @@ Please provide more information about your courses.`;
                   placeholder="Tell us about your interests and how we can help you..."
                 ></textarea>
               </div>
-
               <button
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
@@ -137,9 +126,9 @@ Please provide more information about your courses.`;
           </div>
 
           {/* Contact Info & Map */}
-          <div className="space-y-8">
+          <div className="flex-1 w-full max-w-full flex flex-col gap-8">
             {/* Contact Cards */}
-            <div className="grid gap-4 sm:gap-6 mx-4 lg:mx-0">
+            <div className="grid gap-4 sm:gap-6">
               <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
@@ -154,7 +143,6 @@ Please provide more information about your courses.`;
                   </div>
                 </div>
               </div>
-
               <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
@@ -167,7 +155,6 @@ Please provide more information about your courses.`;
                   </div>
                 </div>
               </div>
-
               <div className="bg-red-50 rounded-xl p-6 border-l-4 border-red-600">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center">
@@ -179,7 +166,6 @@ Please provide more information about your courses.`;
                   </div>
                 </div>
               </div>
-
               <div className="bg-yellow-50 rounded-xl p-6 border-l-4 border-yellow-600">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center">
@@ -194,14 +180,13 @@ Please provide more information about your courses.`;
                 </div>
               </div>
             </div>
-
             {/* Google Map */}
-            <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-lg mx-4 lg:mx-0">
+            <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-lg w-full h-64 sm:h-80 md:h-96">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3908.7588321014846!2d78.36811947505365!3d11.569138888631997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDM0JzA4LjkiTiA3OMKwMjInMTQuNSJF!5e0!3m2!1sen!2sin!4v1755056017463!5m2!1sen!2sin"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
+                width="100%"
+                height="100%"
+                style={{ border: 0, width: '100%', height: '100%' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
