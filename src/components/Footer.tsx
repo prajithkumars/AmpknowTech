@@ -12,13 +12,13 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+      <div className="container mx-auto px-4 py-12 sm:py-16 max-w-full overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
               <img 
-                src="/public/amplogo.png" 
+                src="/amplogo.png" 
                 alt="AMPKNOW TECH ACADEMY" 
                 className="w-12 h-12"
               />
@@ -134,7 +134,7 @@ const Footer: React.FC = () => {
             {/* Social Media */}
             <div className="mt-6">
               <h5 className="text-sm font-semibold mb-4">Follow Us</h5>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap gap-3">
                 <a href="https://www.facebook.com/profile.php?id=61577976128373" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>
@@ -160,12 +160,12 @@ const Footer: React.FC = () => {
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-6">
+        <div className="container mx-auto px-4 py-6 max-w-full">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © 2025 AMPKNOW TECH ACADEMY. All Rights Reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex flex-wrap gap-4 sm:gap-6 mt-4 md:mt-0 justify-center md:justify-end">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </a>

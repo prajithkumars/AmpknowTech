@@ -4,6 +4,20 @@
 
 * {
   font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Container max width */
+.container {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 html {

@@ -16,10 +16,10 @@ const About: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <div className="space-y-8">
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
               <div className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="w-8 h-8 text-blue-600" />
@@ -64,7 +64,7 @@ const About: React.FC = () => {
           </div>
 
           {/* Contact Info Card */}
-          <div className="bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-blue-600">
+          <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 border-t-4 border-blue-600 mx-4 lg:mx-0">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Get In Touch</h3>
             
             <div className="space-y-6">

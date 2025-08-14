@@ -18,11 +18,26 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    // Reset form
+    
+    // Create WhatsApp message with form details
+    const message = `Hi, I'm interested in AMPKNOW TECH ACADEMY courses.
+
+My Details:
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+
+Message: ${formData.message}
+
+Please provide more information about your courses.`;
+    
+    // Open WhatsApp with the message
+    const whatsappUrl = `https://wa.me/917904617831?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form after sending
     setFormData({ name: '', email: '', phone: '', message: '' });
-    alert('Thank you for your message! We will get back to you soon.');
+    alert('Redirecting to WhatsApp with your details...');
   };
 
   return (
@@ -39,13 +54,13 @@ const Contact: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Contact Form */}
-          <div className="bg-gray-50 rounded-2xl p-8">
+          <div className="bg-gray-50 rounded-2xl p-6 sm:p-8 mx-4 lg:mx-0">
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Send us a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -124,7 +139,7 @@ const Contact: React.FC = () => {
           {/* Contact Info & Map */}
           <div className="space-y-8">
             {/* Contact Cards */}
-            <div className="grid gap-6">
+            <div className="grid gap-4 sm:gap-6 mx-4 lg:mx-0">
               <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
@@ -181,7 +196,7 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Google Map */}
-            <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-lg mx-4 lg:mx-0">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3908.7588321014846!2d78.36811947505365!3d11.569138888631997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDM0JzA4LjkiTiA3OMKwMjInMTQuNSJF!5e0!3m2!1sen!2sin!4v1755056017463!5m2!1sen!2sin"
                 width="600"

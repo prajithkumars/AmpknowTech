@@ -6,7 +6,7 @@ const Loader: React.FC = () => {
       <div className="text-center">
         <div className="relative">
           <img 
-            src="/public/amplogo.png" 
+            src="/amplogo.png" 
             alt="AMPKNOW TECH ACADEMY" 
             className="w-24 h-24 mx-auto mb-6 animate-pulse"
           />

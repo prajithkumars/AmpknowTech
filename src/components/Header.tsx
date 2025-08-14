@@ -26,17 +26,17 @@ const Header: React.FC = () => {
     <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
       isScrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur-sm py-4'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 w-full max-w-full">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <img 
-              src="/public/amplogo.png" 
+              src="/amplogo.png" 
               alt="AMPKNOW TECH ACADEMY" 
-              className="w-12 h-12"
+              className="w-10 h-10 sm:w-12 sm:h-12"
             />
             <div>
-              <h1 className="text-xl font-bold text-blue-600">AMPKNOW TECH</h1>
-              <p className="text-sm text-gray-600 -mt-1">ACADEMY</p>
+              <h1 className="text-lg sm:text-xl font-bold text-blue-600">AMPKNOW TECH</h1>
+              <p className="text-xs sm:text-sm text-gray-600 -mt-1">ACADEMY</p>
             </div>
           </div>
 
@@ -68,7 +68,7 @@ const Header: React.FC = () => {
             </button>
             <button 
               onClick={() => window.open('https://wa.me/917904617831?text=Hi%2C%20I%20need%20information%20about%20courses%20at%20AMPKNOW%20TECH%20ACADEMY', '_blank')}
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-4 sm:px-6 py-2 rounded-full font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Enroll Now
             </button>
@@ -85,7 +85,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gray-200">
+          <nav className="md:hidden mt-4 pb-4 border-t border-gray-200 w-full">
             <div className="flex flex-col space-y-4 pt-4">
               <button 
                 onClick={() => scrollToSection('home')}
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
               </button>
               <button 
                 onClick={() => window.open('https://wa.me/917904617831?text=Hi%2C%20I%20need%20information%20about%20courses%20at%20AMPKNOW%20TECH%20ACADEMY', '_blank')}
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-2 rounded-full font-semibold transition-all duration-300 w-fit"
+                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 py-2 rounded-full font-semibold transition-all duration-300 w-full text-center"
               >
                 Enroll Now
               </button>

@@ -262,7 +262,7 @@ const Courses: React.FC = () => {
             <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
             {electricalCourses.map((course, index) => (
               <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CourseCard course={course} />
@@ -280,7 +280,7 @@ const Courses: React.FC = () => {
             <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
             {csCourses.map((course, index) => (
               <div key={index} className="animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CourseCard course={course} />
@@ -291,16 +291,16 @@ const Courses: React.FC = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12">
-            <h3 className="text-3xl font-bold text-white mb-4">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 sm:p-8 md:p-12 mx-4 sm:mx-0">
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
               Ready to Start Your Learning Journey?
             </h3>
-            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-blue-100 text-base sm:text-lg mb-8 max-w-2xl mx-auto px-4">
               Join thousands of students who have transformed their careers with our expert-led courses.
             </p>
             <button 
               onClick={() => window.open('https://wa.me/917904617831?text=Hi%2C%20I%20need%20information%20about%20all%20courses%20at%20AMPKNOW%20TECH%20ACADEMY', '_blank')}
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Get Course Details
             </button>
